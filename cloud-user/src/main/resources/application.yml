@@ -1,0 +1,22 @@
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    #指定服务注册名
+    name: cloud-user
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/student?characterEncoding=UTF8
+    username: root
+    password: 123
+  jpa:
+    database: mysql
+    show-sql: true
+
