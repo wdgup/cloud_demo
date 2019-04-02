@@ -10,6 +10,7 @@
     <modules>
         <module>cloud_eureka</module>
         <module>cloudUser</module>
+        <module>cloud_manager</module>
     </modules>
     <packaging>pom</packaging>
 

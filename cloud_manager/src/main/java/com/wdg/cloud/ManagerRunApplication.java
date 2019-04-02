@@ -1,23 +1,25 @@
-package com.wdg.cloud.user;
+package com.wdg.cloud;/**
+ * @Author: daogang.wang@baozun.com
+ * @Date: 2019/4/2 15:37
+ * @Description:
+ */
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @author WDG
- * @date 2019-2-17
- */
+ *@Author: daogang.wang@baozun.com
+ *@Data:2019/4/2、15:37
+ **/
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@EnableEurekaClient
+@EnableFeignClients
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = "com.wdg.cloud.user")
-public class UserApplication {
+public class ManagerRunApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserApplication.class,args);
+        SpringApplication.run(ManagerRunApplication.class,args);
     }
 }

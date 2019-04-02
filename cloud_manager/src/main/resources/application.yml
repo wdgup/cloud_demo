@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9002
 eureka:
   client:
     service-url:
@@ -9,7 +9,7 @@ eureka:
 spring:
   application:
     #指定服务注册名
-    name: user
+    name: manager
 
   #datasource:
     #driver-class-name: com.mysql.jdbc.Driver

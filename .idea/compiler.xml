@@ -8,7 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-user" />
         <module name="cloud_eureka" />
+        <module name="cloud_manager" />
+        <module name="cloudEurekaServer" />
+        <module name="cloudUser" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloudEurekaServer" options="-parameters" />
+      <module name="cloudUser" options="-parameters" />
+      <module name="cloud_manager" options="-parameters" />
+    </option>
   </component>
 </project>
