@@ -1,6 +1,7 @@
 package com.wdg.cloud.user.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author WDG
@@ -8,7 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="user")
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-user" />
+        <module name="cloud-order" />
         <module name="cloud_eureka" />
+        <module name="cloudUser" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-user" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
