@@ -3,10 +3,9 @@ package com.wdg.cloud.user.controller;
 import com.wdg.cloud.user.bean.User;
 import com.wdg.cloud.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
 
 /**
  * @author WDG
@@ -16,12 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
-
     @Autowired
     private UserService userService;
 
     @GetMapping("/{id}")
     public User findUser(@PathVariable(name = "id") Integer id){
+        System.out.println("---------findUser---------"+System.currentTimeMillis());
         return userService.findUserById(id);
     }
+
+    @PutMapping(value = "/creatUser")
+    public ResponseEntity<User> createUser(@RequestBody User user){
+        return ResponseEntity.ok(userService.createUser(user));
+    }
+
+
 }
